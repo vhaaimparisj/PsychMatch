@@ -74,8 +74,10 @@ jobs:
 
         # For more details on CodeQL's query packs, refer to: https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs
         # queries: security-extended,security-and-quality
+        
     - name: Build project
       run: |
+        dotnet nuget add source "https://nuget.telerik.com/v3/index.json" --name telerik --username ${{ secrets.TELERIK_USERNAME }} --password ${{ secrets.VA_GITHUB_KEY1 }} --store-password-in-clear-text
         nuget restore
         msbuild /p:Configuration=Debug
     # If the analyze step fails for one of the languages you are analyzing with

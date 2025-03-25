@@ -1,0 +1,128 @@
+// Databases menu styles //
+.databases-menu {
+    line-height: 0.9rem;
+     h1, i, a, hr {
+         color:#112e51;
+     }
+     a, i {
+         text-decoration: none;
+     }
+     i {
+         font-size: 2rem;
+     }
+     div.db-nav-title {
+        border-bottom: 1px solid #112e51;
+     }
+}
+div.databases-menu {
+    background: #fff;
+}
+
+div.databases-menu-item:hover  {
+    background: #112e51;
+    a, i {
+        color: #fff;
+    }
+}
+
+div.db-content th{
+    font-size: 1.2rem;
+}
+.btn-primary{
+    background: #003e73;
+}
+.btn-primary:hover{
+    background: #012544;
+}
+.btn-info {
+    background: #0071bb;
+    color: #fff;
+}
+.btn-info:hover{
+    background: #002d55;
+    color: #fff;
+
+}
+
+// sub-navbar //
+
+.database-menu {
+    h3 {
+        padding-top: 20px;
+    }
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+    .btn-warning, i {
+        color: #002d55;
+    }
+    .btn-warning {
+        background-color: lightgray;
+
+        border-color: gray;
+    }
+    .btn-warning:hover {
+        background-color: gray;
+        color: #fff;
+        border-color: gray;
+        i {
+            color:#fff;
+        }
+    }
+
+}
+// sub body content //
+form#frmMaster {
+    font-size:1rem;
+    p, ol li {
+        font-size:1rem;
+    }
+    .rgHeader a, .rgGroupHeader p {
+        font-size:0.7rem!important;
+    }
+    ol li {
+        padding-top: 1rem;
+        font-weight: bold;
+    }
+    td {
+        padding-bottom: 1rem;
+    }
+    .btn-info {
+        background-color: lightblue!important;
+    }
+    .btn-info:hover {
+        color: #fff;
+        background-color: rgb(80, 148, 170)!important;
+    }
+    div#Upload {
+        padding: 1.5rem;
+    }
+    td {
+        padding: 5px;
+    }
+}
+
+// DB Restyle //
+.database-menu {
+    background-color: #212529;
+    a.btn {
+        font-weight: 800;
+        font-size:0.75rem!important;
+    }
+}
+.database-parent { 
+    margin-top:1rem;
+}
+.quick-instructions {
+    width:100%;
+    padding-bottom:1rem;
+}
+.RadAjaxPanel {
+    margin-bottom:3rem;
+}
+.rgMasterTable {
+    td, span {
+        font-size:.8rem;
+    }
+}

@@ -1,0 +1,476 @@
+body {
+  color: #000;
+  background-color: #fff;
+  font-family: Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  position: relative;
+}
+
+@font-face {
+  font-family: Bitter-Bold;
+  src: url("fonts/Bitter-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: SourceSansPro-Regular;
+  src: url("fonts/SourceSansPro-Regular.ttf") format("truetype");
+}
+
+p, a, span, strong {
+  font-size: 1rem;
+  font-family: 'SourceSansPro-Regular', 'Arial', sans-serif;
+}
+.badge {
+  font-size: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bitter-Bold','Georgia', serif;
+}
+
+.listview-layout a {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+p.footer-text, .site-hero {
+  color: #fff;
+}
+
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+  font-size: 1.2rem;
+}
+
+i {
+  font-size: 1rem;
+  color: white;
+}
+
+table {
+  line-height: 1.2rem;
+}
+
+footer {
+  background-color: #112e51;
+}
+
+.notice-text p{
+  font-size: 1rem;
+}
+
+.notice-text strong {
+  font-size: 1.1rem;
+}
+
+.site-login {
+  background-color: #112e51;
+  color: #fff;
+  margin-top: -10%;
+  padding-top: 10%;
+  border-bottom: solid 5px  #fdb81e;
+}
+
+.site-login div.login-row {
+  border-top: 1px solid #fff;
+}
+
+.site-login p {
+  font-size: 0.75rem;
+}
+
+.gold-top {
+  border-top: solid 5px  #fdb81e;
+}
+
+.RadMenu {
+  z-index: 1 !important;
+}
+
+.RadMenu u {
+  border: solid 1px #cdcccc !important;
+}
+
+.accordion-button {
+  color: #fff;
+  background-color: #112E51;
+  font-weight: bold;
+}
+
+.accordion-button.collapsed::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-button:not(.collapsed) {
+  color: #112E51;
+  background-color: white;
+}
+
+.accordion-button:focus {
+  border: none;
+}
+
+.support-img {
+  max-width: 100%;
+}
+
+.accordion-body li {
+  list-style-type: none;
+}
+
+.accordion-body a {
+  font-size: 1rem;
+  color: #004795;
+  text-decoration: underline;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition-property: color, background-color, border-color;
+  transition-property: color, background-color, border-color;
+}
+
+.accordion-body a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: grey;
+  text-decoration: underline;
+}
+
+.select-menu-row {
+  --bs-gutter-x: 0!important;
+}
+
+.addilinks {
+  background-color: white;
+  color: black;
+}
+
+.addilinks .card {
+  background-color: #112E51;
+  border: 1px solid white;
+  min-height: 140px;
+}
+
+.addilinks div.card:hover {
+  background-color: #fff;
+  -moz-transition: background 0.3s ease-in;
+  -webkit-transition: background 0.3s ease-in;
+}
+
+.addilinks a {
+  color: #fff;
+}
+
+.addilinks a:hover {
+  color: #112E51;
+  -moz-transition: color 0.3s ease-in;
+  -webkit-transition: color 0.3s ease-in;
+}
+
+.attentioncont {
+  border: solid 1px #000;
+  padding: 2%;
+  margin-bottom: 2%;
+}
+
+.righttext {
+  font-size: 1rem;
+  text-align: right;
+  font-weight: bold;
+  color: #2b647e;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+.sel-container {
+  background-color: lightblue !important;
+}
+
+p.lead {
+  font-size: 0.85rem !important;
+}
+
+.navbar-toggler:focus {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.site-hero {
+  background: -webkit-gradient(linear, left top, left bottom, from(#0071bb), color-stop(63%, #112e51));
+  background: linear-gradient(to bottom, #0071bb 0%, #112e51 63%);
+}
+
+.hero-content {
+  background-color: #222 !important;
+}
+
+.btn {
+  font-size: 1rem !important;
+}
+
+.btn-secondary {
+  background-color: #222 !important;
+}
+
+.register-content div.form-group {
+  padding-top: 15px;
+}
+
+.site-header {
+  background-color: #112e51;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #112e51;
+  color: #fff;
+  display: block;
+}
+
+span.site-header.logo-text {
+  display: block;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  font-weight: 300;
+  font-style: normal;
+}
+
+a.site-header.logo-link, a.site-header.logo-link:visited {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+}
+
+strong.header-logo-text {
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  font-weight: 700;
+}
+
+div.site-1-wrapper {
+  padding: 0 4rem;
+  display: block;
+}
+
+div.site-header.masthead {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header-disclaimer {
+  background-color: #fff;
+  color: #0071bb;
+  font-size: 0.8rem;
+}
+
+
+
+.navbar a {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+
+
+.navbar ul {
+  font-size: 0.9em;
+}
+
+.navbar .btn-login {
+  background-color: #0071bb;
+  color: #fff;
+  font-weight: 700;
+  margin: 0.5rem, 1rem;
+  line-height: 1.5;
+}
+
+.navbar .btn-login:hover {
+  background-color: #003e73;
+  color: #fff;
+}
+
+img.header-logo-img {
+  max-width: 20rem;
+  max-height: 3rem;
+}
+
+img.footer-logo-img {
+  max-width: 100%;
+}
+
+.aspNetHidden {
+  display: none;
+}
+
+form#frmMaster br {
+  display: none;
+}
+
+.databases-menu {
+  line-height: 0.9rem;
+}
+
+.databases-menu h1, .databases-menu i, .databases-menu a, .databases-menu hr {
+  color: #112e51;
+}
+
+.databases-menu a, .databases-menu i {
+  text-decoration: none;
+}
+
+.databases-menu i {
+  font-size: 2rem;
+}
+
+.databases-menu div.db-nav-title {
+  border-bottom: 1px solid #112e51;
+}
+
+div.databases-menu {
+  background: #fff;
+}
+
+div.databases-menu-item:hover {
+  background: #112e51;
+}
+
+div.databases-menu-item:hover a, div.databases-menu-item:hover i {
+  color: #fff;
+}
+
+div.db-content th {
+  font-size: 1.2rem;
+}
+
+.btn-primary {
+  background: #003e73;
+}
+
+.btn-primary:hover {
+  background: #012544;
+}
+
+.btn-info {
+  background: #0071bb;
+  color: #fff;
+}
+
+.btn-info:hover {
+  background: #002d55;
+  color: #fff;
+}
+
+.database-menu h3 {
+  padding-top: 20px;
+}
+
+.database-menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.database-menu .btn-warning, .database-menu i {
+  color: #002d55;
+}
+
+.database-menu .btn-warning {
+  background-color: lightgray;
+  border-color: gray;
+}
+
+.database-menu .btn-warning:hover {
+  background-color: gray;
+  color: #fff;
+  border-color: gray;
+}
+
+.database-menu .btn-warning:hover i {
+  color: #fff;
+}
+
+form#frmMaster {
+  font-size: 1rem;
+}
+
+form#frmMaster p, form#frmMaster ol li {
+  font-size: 1rem;
+}
+
+form#frmMaster .rgHeader a, form#frmMaster .rgGroupHeader p {
+  font-size: 0.7rem !important;
+}
+
+form#frmMaster ol li {
+  padding-top: 1rem;
+  font-weight: bold;
+}
+
+form#frmMaster td {
+  padding-bottom: 1rem;
+}
+
+form#frmMaster .btn-info {
+  background-color: lightblue !important;
+}
+
+form#frmMaster .btn-info:hover {
+  color: #fff;
+  background-color: #5094aa !important;
+}
+
+form#frmMaster div#Upload {
+  padding: 1.5rem;
+}
+
+form#frmMaster td {
+  padding: 5px;
+}
+
+.database-menu {
+  background-color: #212529;
+}
+
+.database-menu a.btn {
+  font-weight: 800;
+  font-size: 0.75rem !important;
+}
+
+.database-parent {
+  margin-top: 1rem;
+}
+
+.quick-instructions {
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+
+.rgMasterTable td, .rgMasterTable span {
+  font-size: .8rem;
+}
+/*# sourceMappingURL=style.css.map */

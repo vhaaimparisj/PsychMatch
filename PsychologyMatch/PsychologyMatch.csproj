@@ -1,0 +1,406 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FF002461-E781-49B1-8329-5F6DC94BE1F8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PsychologyMatch</RootNamespace>
+    <AssemblyName>PsychologyMatch</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44361</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AngleSharp, Version=0.16.1.0, Culture=neutral, PublicKeyToken=e83494dcdc6d31ea, processorArchitecture=MSIL">
+      <HintPath>..\packages\AngleSharp.0.16.1\lib\net472\AngleSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="AngleSharp.Css, Version=0.16.1.0, Culture=neutral, PublicKeyToken=e83494dcdc6d31ea, processorArchitecture=MSIL">
+      <HintPath>..\packages\AngleSharp.Css.0.16.1\lib\net472\AngleSharp.Css.dll</HintPath>
+    </Reference>
+    <Reference Include="AntiXssLibrary, Version=4.3.0.0, Culture=neutral, PublicKeyToken=d127efab8a9c114f, processorArchitecture=MSIL">
+      <HintPath>..\packages\AntiXSS.4.3.0\lib\net40\AntiXssLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.11.37.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.11.37\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlSanitizationLibrary, Version=4.3.0.0, Culture=neutral, PublicKeyToken=d127efab8a9c114f, processorArchitecture=MSIL">
+      <HintPath>..\packages\AntiXSS.4.3.0\lib\net40\HtmlSanitizationLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlSanitizer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=61c49a1a9e79cc28, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlSanitizer.6.0.453\lib\net46\HtmlSanitizer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.Data, Version=2.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.CodePages, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encoding.CodePages.5.0.0\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Telerik.Web.Design, Version=2023.3.1010.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Telerik.UI.for.AspNet.Ajax.Net45.2023.3.1010\lib\net45\Telerik.Web.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.Device.Detection, Version=2023.3.1010.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Telerik.UI.for.AspNet.Ajax.Net45.2023.3.1010\lib\net45\Telerik.Web.Device.Detection.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2023.3.1010.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Telerik.UI.for.AspNet.Ajax.Net45.2023.3.1010\lib\net45\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins, Version=2023.3.1010.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Telerik.UI.for.AspNet.Ajax.Net45.2023.3.1010\lib\net45\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="404Error.html" />
+    <Content Include="AddNewPosition.aspx" />
+    <Content Include="Certify.aspx" />
+    <Content Include="Controls\FacilityControl.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="EntryComplete.aspx" />
+    <Content Include="Error.html" />
+    <Content Include="Global.asax" />
+    <Content Include="images\11_A2_OAA_logo_gold_Reverse_Final.png" />
+    <Content Include="images\background-gradient.gif" />
+    <Content Include="images\background-grid.gif" />
+    <Content Include="images\background-main.gif" />
+    <Content Include="images\background-main.jpg" />
+    <Content Include="images\blue_gradient_bkg.jpg" />
+    <Content Include="images\chevron.jpg" />
+    <Content Include="images\clouds.gif" />
+    <Content Include="images\clouds.jpg" />
+    <Content Include="images\collapse_blue.jpg" />
+    <Content Include="images\Edit.png" />
+    <Content Include="images\expand_blue.jpg" />
+    <Content Include="images\faq_wipe.gif" />
+    <Content Include="images\gradient_bkg.gif" />
+    <Content Include="images\gradient_bkg.jpg" />
+    <Content Include="images\greencheck.gif" />
+    <Content Include="images\GreenCheckMark.png" />
+    <Content Include="images\h1grid-wipe.gif" />
+    <Content Include="images\intra-banner-text.gif" />
+    <Content Include="images\intra-banner.gif" />
+    <Content Include="images\intra-banner.jpg" />
+    <Content Include="images\intra-header-banner-bg.gif" />
+    <Content Include="images\left-nav-footer.gif" />
+    <Content Include="images\left-nav-footer.jpg" />
+    <Content Include="images\left-nav-tile.jpg" />
+    <Content Include="images\left-nav2.jpg" />
+    <Content Include="images\left-nav3.jpg" />
+    <Content Include="images\leftarrow.png" />
+    <Content Include="images\lightbluegradientbackground.jpg" />
+    <Content Include="images\OAA-logo-white.png" />
+    <Content Include="images\OAA-logo.png" />
+    <Content Include="images\OAAVALogo.jpg" />
+    <Content Include="images\PM-LOGO.png" />
+    <Content Include="images\redx.gif" />
+    <Content Include="images\redx_trans.gif" />
+    <Content Include="images\spacer.gif" />
+    <Content Include="images\start.jpg" />
+    <Content Include="images\test3.gif" />
+    <Content Include="images\tile-nav-horz.gif" />
+    <Content Include="images\tile_nav_blue_220px.gif" />
+    <Content Include="images\title-header.gif" />
+    <Content Include="images\va-logo-white.png" />
+    <Content Include="images\VAHeader.png" />
+    <Content Include="images\waiting.gif" />
+    <Content Include="Logout.aspx" />
+    <Content Include="PsychMatchList.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="RegisterUpdate.aspx" />
+    <Content Include="styles\BootStrap5\css\bootstrap-grid.css" />
+    <Content Include="styles\BootStrap5\css\bootstrap-grid.min.css" />
+    <Content Include="styles\BootStrap5\css\bootstrap-grid.rtl.css" />
+    <Content Include="styles\BootStrap5\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="styles\BootStrap5\css\bootstrap-reboot.css" />
+    <Content Include="styles\BootStrap5\css\bootstrap-reboot.min.css" />
+    <Content Include="styles\BootStrap5\css\bootstrap-reboot.rtl.css" />
+    <Content Include="styles\BootStrap5\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="styles\BootStrap5\css\bootstrap-utilities.css" />
+    <Content Include="styles\BootStrap5\css\bootstrap-utilities.min.css" />
+    <Content Include="styles\BootStrap5\css\bootstrap-utilities.rtl.css" />
+    <Content Include="styles\BootStrap5\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="styles\BootStrap5\css\bootstrap.css" />
+    <Content Include="styles\BootStrap5\css\bootstrap.min.css" />
+    <Content Include="styles\BootStrap5\css\bootstrap.rtl.css" />
+    <Content Include="styles\BootStrap5\css\bootstrap.rtl.min.css" />
+    <Content Include="styles\BootStrap5\js\bootstrap.bundle.js" />
+    <Content Include="styles\BootStrap5\js\bootstrap.bundle.min.js" />
+    <Content Include="styles\BootStrap5\js\bootstrap.esm.js" />
+    <Content Include="styles\BootStrap5\js\bootstrap.esm.min.js" />
+    <Content Include="styles\BootStrap5\js\bootstrap.js" />
+    <Content Include="styles\BootStrap5\js\bootstrap.min.js" />
+    <Content Include="styles\General_stylesBS2.css" />
+    <Content Include="styles\style.css" />
+    <Content Include="TopMenu.ascx" />
+    <Content Include="UserNotice.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddNewPosition.aspx.cs">
+      <DependentUpon>AddNewPosition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddNewPosition.aspx.designer.cs">
+      <DependentUpon>AddNewPosition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Certify.aspx.designer.cs">
+      <DependentUpon>Certify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FacilityControl.ascx.cs">
+      <DependentUpon>FacilityControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\FacilityControl.ascx.designer.cs">
+      <DependentUpon>FacilityControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EntryComplete.aspx.designer.cs">
+      <DependentUpon>EntryComplete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Old_App_Code\ADINFO.cs" />
+    <Compile Include="Old_App_Code\ADLogic.cs" />
+    <Compile Include="Old_App_Code\DataAccess.cs" />
+    <Compile Include="Old_App_Code\HelperFunctions.cs" />
+    <Compile Include="Old_App_Code\HtmlUtility.cs" />
+    <Compile Include="Old_App_Code\StringExtension.cs" />
+    <Compile Include="Old_App_Code\User.cs" />
+    <Compile Include="Certify.aspx.cs">
+      <DependentUpon>Certify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EntryComplete.aspx.cs">
+      <DependentUpon>EntryComplete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PsychMatchList.aspx.cs">
+      <DependentUpon>PsychMatchList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PsychMatchList.aspx.designer.cs">
+      <DependentUpon>PsychMatchList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterUpdate.aspx.cs">
+      <DependentUpon>RegisterUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegisterUpdate.aspx.designer.cs">
+      <DependentUpon>RegisterUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.master.cs">
+      <DependentUpon>Site.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.master.designer.cs">
+      <DependentUpon>Site.master</DependentUpon>
+    </Compile>
+    <Compile Include="TopMenu.ascx.cs">
+      <DependentUpon>TopMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TopMenu.ascx.designer.cs">
+      <DependentUpon>TopMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserNotice.aspx.cs">
+      <DependentUpon>UserNotice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserNotice.aspx.designer.cs">
+      <DependentUpon>UserNotice.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\Thumbs.db" />
+    <None Include="packages.config" />
+    <Content Include="Site.master" />
+    <Content Include="styles\BootStrap5\css\bootstrap-grid.css.map" />
+    <Content Include="styles\BootStrap5\css\bootstrap-grid.min.css.map" />
+    <Content Include="styles\BootStrap5\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="styles\BootStrap5\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="styles\BootStrap5\css\bootstrap-reboot.css.map" />
+    <Content Include="styles\BootStrap5\css\bootstrap-reboot.min.css.map" />
+    <Content Include="styles\BootStrap5\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="styles\BootStrap5\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="styles\BootStrap5\css\bootstrap-utilities.css.map" />
+    <Content Include="styles\BootStrap5\css\bootstrap-utilities.min.css.map" />
+    <Content Include="styles\BootStrap5\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="styles\BootStrap5\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="styles\BootStrap5\css\bootstrap.css.map" />
+    <Content Include="styles\BootStrap5\css\bootstrap.min.css.map" />
+    <Content Include="styles\BootStrap5\css\bootstrap.rtl.css.map" />
+    <Content Include="styles\BootStrap5\css\bootstrap.rtl.min.css.map" />
+    <Content Include="styles\BootStrap5\js\bootstrap.bundle.js.map" />
+    <Content Include="styles\BootStrap5\js\bootstrap.bundle.min.js.map" />
+    <Content Include="styles\BootStrap5\js\bootstrap.esm.js.map" />
+    <Content Include="styles\BootStrap5\js\bootstrap.esm.min.js.map" />
+    <Content Include="styles\BootStrap5\js\bootstrap.js.map" />
+    <Content Include="styles\BootStrap5\js\bootstrap.min.js.map" />
+    <Content Include="styles\fonts\Bitter-Bold.ttf" />
+    <Content Include="styles\fonts\SourceSansPro-Regular.ttf" />
+    <Content Include="styles\style.css.map" />
+    <Content Include="styles\style.scss" />
+    <Content Include="styles\_body.scss" />
+    <Content Include="styles\_databases.scss" />
+    <Content Include="styles\_header.scss" />
+    <Content Include="styles\_variables.scss" />
+    <None Include="Properties\PublishProfiles\DevPublish.pubxml" />
+    <None Include="Properties\PublishProfiles\ProdPublish.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.DevRelease.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.ProdRelease.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Scripts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ProdRelease|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DevRelease|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55710</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44361/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

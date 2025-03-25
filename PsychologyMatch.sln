@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33927.249
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PsychologyMatch", "PsychologyMatch\PsychologyMatch.csproj", "{FF002461-E781-49B1-8329-5F6DC94BE1F8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		DevRelease|Any CPU = DevRelease|Any CPU
+		ProdRelease|Any CPU = ProdRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF002461-E781-49B1-8329-5F6DC94BE1F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF002461-E781-49B1-8329-5F6DC94BE1F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF002461-E781-49B1-8329-5F6DC94BE1F8}.DevRelease|Any CPU.ActiveCfg = DevRelease|Any CPU
+		{FF002461-E781-49B1-8329-5F6DC94BE1F8}.DevRelease|Any CPU.Build.0 = DevRelease|Any CPU
+		{FF002461-E781-49B1-8329-5F6DC94BE1F8}.ProdRelease|Any CPU.ActiveCfg = ProdRelease|Any CPU
+		{FF002461-E781-49B1-8329-5F6DC94BE1F8}.ProdRelease|Any CPU.Build.0 = ProdRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6E4D0AE0-5BC1-41C2-B6A8-307DDD7A2126}
+	EndGlobalSection
+EndGlobal

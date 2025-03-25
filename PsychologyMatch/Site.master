@@ -1,0 +1,73 @@
+<%@ Master Language="C#" AutoEventWireup="true" Inherits="Site" Codebehind="Site.master.cs" %>
+
+<%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
+<script runat="server">
+</script>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Psychology Internship Affiliation Match Portal</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles/bootstrap5/css/bootstrap.min.css" />
+    <link href="styles/style.css" type="text/css" rel="stylesheet" />
+</head>
+<body id="Body1" class="mainbody" runat="server">
+    <div class="bdywrprFull">
+
+        <div class="site-header">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-sm  ms-3 me-3">
+                    <a class="navbar-brand " title="Office of Academic Affiliations" href="/">
+                        <img class="header-logo-img" title="Office of Academic Affiliations Psychology Match Portal" runat="server" src="~/images/PM-LOGO.png"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="container-fluid d-flex justify-content-end vertical-align-end">
+                            <ul class="site-header navbar-nav ">
+
+                                <li class="nav-item"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="gold-top">
+            <%--
+                        <div id="leftcontent">
+                            <br />
+                            <asp:ContentPlaceHolder ID="CMMenu" runat="server">
+                            </asp:ContentPlaceHolder>
+                            <br />
+                        </div>
+            --%>
+            <form id="form1" runat="server">
+
+                <asp:ContentPlaceHolder ID="CM" runat="server">
+                </asp:ContentPlaceHolder>
+            </form>
+        </div>
+
+        <footer>
+            <div class="container-fluid ps-3 pe-3 pb-5">
+                <div class="row p-4">
+                    <div class="col-sm-3">
+                        <a title="VA.gov" href="http://www.va.gov">
+                            <img class="footer-logo-img" title="VA.GOV" runat="server" src="~/images/va-logo-white.png" /></a>
+                    </div>
+                    <div class="col-sm-7"></div>
+                    <div class="col-sm-2">
+                        <a title="Office of Academic Affiliations" href="/">
+                            <img class="footer-logo-img" title="Office of Academic Affiliations" runat="server" src="~/images/oaa-logo-white.png" /></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="/styles/BootStrap5/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

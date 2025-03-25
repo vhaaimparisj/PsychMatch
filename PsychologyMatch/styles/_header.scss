@@ -1,0 +1,101 @@
+@mixin flexcenter() {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.site-header {
+    background-color: $headerbgc;
+}
+nav {
+    @include flexcenter();
+    background-color: $headerbgc;
+    color: $headertext;
+    display: block;
+
+}
+
+span.site-header.logo-text {
+    display: block;
+    font-size: 1.6rem;
+    line-height:1.8rem;
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+a.site-header.logo-link, a.site-header.logo-link:visited {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+
+}
+
+strong.header-logo-text {
+    font-size: 1.6rem;
+    line-height:1.8rem;
+    font-weight:700;
+}
+
+div.site-1-wrapper {
+    padding: 0 4rem;
+    display:block;
+}
+
+div.site-header.masthead {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.header-disclaimer {
+    background-color: #fff;
+    color:#0071bb;
+    font-size: 0.8rem;
+}
+
+.site-header-nav {
+}
+.navbar {
+    z-index: 8000;
+
+    a {
+        font-size: 1.2rem;
+        color:#fff;
+    }
+    a:hover{
+        color: gray;
+    }
+    ul {
+        font-size: 0.9em;
+    }
+    .btn-login {
+        background-color:#0071bb;
+        color:#fff;
+        font-weight: 700;
+        margin:0.5rem, 1rem;
+        line-height: 1.5;
+
+    }
+    .btn-login:hover {
+        background-color: #003e73;
+        color: #fff;
+    }
+}
+img.header-logo-img {
+    max-width: 20rem;
+    max-height: 3rem;
+}
+
+img.footer-logo-img {
+    max-width: 100%;
+}
+.aspNetHidden {
+    display: none;
+}
+
+form#frmMaster br {
+    display: none;
+}
+
+

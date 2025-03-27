@@ -79,7 +79,8 @@ jobs:
       run: |
         dotnet nuget add source "https://nuget.telerik.com/v3/index.json" --name telerik --username ${{ secrets.TELERIK_USERNAME }} --password ${{ secrets.VA_GITHUB_KEY1 }} --store-password-in-clear-text
         nuget restore
-        dotnet build --configuration Release
+        dotnet build --configuration Debug 
+        
     # msbuild /p:Configuration=Debug        
     # If the analyze step fails for one of the languages you are analyzing with
     # "We were unable to automatically build your code", modify the matrix above

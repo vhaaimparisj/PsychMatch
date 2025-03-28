@@ -62,6 +62,15 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
+    - name: Find Visual Studio
+      id: vs-installation-path
+      run: |
+        $vswhere = "C:\ProgramData\chocolatey\lib\vswhere\tools\vswhere.exe"
+        $vsPath = & $vswhere -latest -products * -requires Microsoft.Component.MSBuild -property installationPath
+        echo "::set-output name=vsPath::$vsPath"
+
+    - name: Set VSToolsPath
+      run: echo "VSToolsPath=${{ steps.vs-installation-path.outputs.vsPath }}\\MSBuild\\Current\\Bin" >> $env:GITHUB_ENV
     # Add any setup steps before running the `github/codeql-action/init` action.
     # This includes steps like installing compilers or runtimes (`actions/setup-node`
     # or others). This is typically only required for manual builds.
@@ -102,7 +111,7 @@ jobs:
         dotnet nuget add source "https://nuget.telerik.com/v3/index.json" --name telerik --username ${{ secrets.TELERIK_USERNAME }} --password ${{ secrets.VA_GITHUB_KEY1 }} --store-password-in-clear-text
         nuget restore
         dotnet tool restore
-        dotnet build --configuration DevRelease 
+        dotnet build --configuration DevRelease  --property:VSToolsPath=$env:VSToolsPath
         
     # msbuild /p:Configuration=Debug        
     # If the analyze step fails for one of the languages you are analyzing with

@@ -54,6 +54,11 @@ jobs:
         # If you are analyzing a compiled language, you can modify the 'build-mode' for that language to customize how
         # your codebase is analyzed, see https://docs.github.com/en/code-security/code-scanning/creating-an-advanced-setup-for-code-scanning/codeql-code-scanning-for-compiled-languages
     steps:
+    - name: Setup dotnet
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 9.0.200
+    
     - name: Checkout repository
       uses: actions/checkout@v4
 
@@ -75,9 +80,10 @@ jobs:
 
         # For more details on CodeQL's query packs, refer to: https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs
         # queries: security-extended,security-and-quality
-  
-    - name: setup-msbuild
-      uses: microsoft/setup-msbuild@v2
+    
+        
+    # - name: setup-msbuild
+    #  uses: microsoft/setup-msbuild@v2
     
     # - name: Setup NuGet
     #   uses: NuGet/setup-nuget@v1.0.2

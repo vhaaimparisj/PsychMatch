@@ -82,11 +82,11 @@ jobs:
     # - name: Setup NuGet
     #   uses: NuGet/setup-nuget@v1.0.2
       
-    - name: Navigate to Workspace
-      run: cd $GITHUB_WORKSPACE
+    #- name: Navigate to Workspace
+    #  run: cd $GITHUB_WORKSPACE
       
-    - name: Create Build Directory
-      run: mkdir _build
+    #- name: Create Build Directory
+    #  run: mkdir _build
     
     - name: Print directory structure
       run: tree /F  # The /F flag displays the names of the files in each folder

@@ -28,9 +28,7 @@ jobs:
     #   - https://gh.io/using-larger-runners (GitHub.com only)
     # Consider using larger runners or machines with greater resources for possible analysis time improvements.
     runs-on: ${{ (matrix.language == 'swift' && 'macos-latest') || 'windows-latest' }}
-    defaults:
-      run:
-        working-directory: ${{ github.workspace }}/PsychMatch
+    
     permissions:
       # required for all workflows
       security-events: write
@@ -94,7 +92,7 @@ jobs:
       run: |
         dotnet nuget add source "https://nuget.telerik.com/v3/index.json" --name telerik --username ${{ secrets.TELERIK_USERNAME }} --password ${{ secrets.VA_GITHUB_KEY1 }} --store-password-in-clear-text
         nuget restore
-        dotnet build --configuration Debug 
+        dotnet build --configuration Release 
         
     # msbuild /p:Configuration=Debug        
     # If the analyze step fails for one of the languages you are analyzing with

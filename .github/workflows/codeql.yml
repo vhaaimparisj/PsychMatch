@@ -101,6 +101,7 @@ jobs:
       run: |
         dotnet nuget add source "https://nuget.telerik.com/v3/index.json" --name telerik --username ${{ secrets.TELERIK_USERNAME }} --password ${{ secrets.VA_GITHUB_KEY1 }} --store-password-in-clear-text
         nuget restore
+        dotnet tool restore
         dotnet build --configuration DevRelease 
         
     # msbuild /p:Configuration=Debug        

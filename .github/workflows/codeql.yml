@@ -88,8 +88,8 @@ jobs:
     - name: Create Build Directory
       run: mkdir _build
     
-    - name: XDTesting Print Directory Structure
-      uses: FiorelaCiroku/XDTesting-Print-Directory-Structure@v1.0.2
+    - name: Print directory structure
+      run: tree /F  # The /F flag displays the names of the files in each folder
       
     - name: Build project
       run: |

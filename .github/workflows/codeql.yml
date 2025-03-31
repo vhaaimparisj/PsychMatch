@@ -111,8 +111,9 @@ jobs:
         dotnet nuget add source "https://nuget.telerik.com/v3/index.json" --name telerik --username ${{ secrets.TELERIK_USERNAME }} --password ${{ secrets.VA_GITHUB_KEY1 }} --store-password-in-clear-text
         nuget restore
         dotnet tool restore
-        - name: Build solution
         msbuild PsychologyMatch.sln -t:rebuild -property:Configuration=Release
+     #   - name: Build solution
+        
       # dotnet build --configuration DevRelease  --property:VSToolsPath=$env:VSToolsPath
     
         

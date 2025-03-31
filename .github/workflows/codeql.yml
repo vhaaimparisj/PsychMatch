@@ -111,7 +111,7 @@ jobs:
         dotnet nuget add source "https://nuget.telerik.com/v3/index.json" --name telerik --username ${{ secrets.TELERIK_USERNAME }} --password ${{ secrets.VA_GITHUB_KEY1 }} --store-password-in-clear-text
         nuget restore
         dotnet tool restore
-        dotnet build --configuration DevRelease  --property:VSToolsPath=$env:VSToolsPath;VisualStudioVersion=17.0
+        dotnet build --configuration DevRelease  --property:VSToolsPath=$env:VSToolsPath
         
     # msbuild /p:Configuration=Debug        
     # If the analyze step fails for one of the languages you are analyzing with

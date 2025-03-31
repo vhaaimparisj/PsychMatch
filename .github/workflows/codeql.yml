@@ -103,8 +103,8 @@ jobs:
     #- name: Create Build Directory
     #  run: mkdir _build
     
-    - name: Print directory structure
-      run: tree /F  # The /F flag displays the names of the files in each folder
+    # - name: Print directory structure
+    #  run: tree /F  # The /F flag displays the names of the files in each folder
       
     - name: RestorePackages
       run: |

@@ -115,7 +115,7 @@ jobs:
       uses: microsoft/setup-msbuild@v2
 
     - name: Build Solution
-      run: msbuild PsychologyMatch.sln -t:rebuild -property:Configuration=Release
+      run: msbuild PsychologyMatch.sln -t:rebuild -property:Configuration=DevRelease
      #   - name: Build solution
         
       # dotnet build --configuration DevRelease  --property:VSToolsPath=$env:VSToolsPath

@@ -27,7 +27,7 @@ jobs:
     #   - https://gh.io/supported-runners-and-hardware-resources
     #   - https://gh.io/using-larger-runners (GitHub.com only)
     # Consider using larger runners or machines with greater resources for possible analysis time improvements.
-    runs-on: ${{ (matrix.language == 'swift' && 'macos-latest') || 'windows-latest' }}
+    runs-on: ${{ (matrix.language == 'swift' && 'macos-latest') || 'windows-2019' }}
     
     permissions:
       # required for all workflows
@@ -106,12 +106,16 @@ jobs:
     - name: Print directory structure
       run: tree /F  # The /F flag displays the names of the files in each folder
       
-    - name: Build project
+    - name: RestorePackages
       run: |
         dotnet nuget add source "https://nuget.telerik.com/v3/index.json" --name telerik --username ${{ secrets.TELERIK_USERNAME }} --password ${{ secrets.VA_GITHUB_KEY1 }} --store-password-in-clear-text
         nuget restore
-        dotnet tool restore
-        msbuild PsychologyMatch.sln -t:rebuild -property:Configuration=Release
+    # dotnet tool restore
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v2
+
+    - name: Build Solution
+      run: msbuild PsychologyMatch.sln -t:rebuild -property:Configuration=Release
      #   - name: Build solution
         
       # dotnet build --configuration DevRelease  --property:VSToolsPath=$env:VSToolsPath
